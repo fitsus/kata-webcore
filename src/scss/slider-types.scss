@@ -1,0 +1,27 @@
+.slider-types {
+  margin-top: 0;
+}
+
+.swiper-types {
+  height: 198px;
+
+  &::after {
+    height: 198px;
+  }
+
+  &.card-list--active {
+    min-height: 540px;
+  }
+}
+
+.card__link-types {
+  display: flex;
+  align-items: flex-start;
+  height: 160px;
+
+  &::after {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+  }
+}

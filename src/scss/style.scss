@@ -1,0 +1,59 @@
+@import 'nullstyle';
+@import url('../../node_modules/swiper/swiper-bundle.css');
+@import 'btn';
+@import 'services';
+@import 'slider-manufactor';
+@import 'slider-types';
+@import 'slider-prices';
+@import 'title';
+@import 'menu';
+@import 'footer';
+@import 'modal';
+
+
+
+
+
+$bgColor: #F8F8F8;
+$text: #1B1C21;
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url('../fonts/TTLakes-Bold.woff') format('woff'),
+    url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'TT Lakes', sans-serif;
+  background-color: $bgColor;
+  color: $text;
+}
+
+.main {
+  @media (min-width: 1119px) {
+    margin-left: 320px;
+  }
+}
