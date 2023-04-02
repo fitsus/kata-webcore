@@ -1,9 +1,15 @@
+$colorWhite: #fff;
+$mainBgColor: #EAEAEA;
+$textColor: #1B1C21;
+$hoverTextColor: #7E7E82;
+$colorBlue: #41F6D7;
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 88px;
-  background-color: #fff;
+  background-color: $colorWhite;
   padding: 0 16px;
 
   @media (min-width: 1119px) {
@@ -78,7 +84,7 @@
         left: -30px;
         width: 32px;
         height: 2px;
-        background: #EAEAEA;
+        background: $mainBgColor;
         border-radius: 1px;
         transform: rotate(90deg);
 
@@ -128,7 +134,7 @@
       left: 60px;
       width: 32px;
       height: 0px;
-      background: #EAEAEA;
+      background: $mainBgColor;
       border-radius: 1px;
       transform: rotate(90deg);
 
@@ -157,7 +163,7 @@
   justify-content: flex-start;
   padding: 0 24px;
   height: 100vh;
-  background-color: #fff;
+  background-color: $colorWhite;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
     16px 0px 52px rgba(14, 24, 80, 0.2);
 
@@ -188,7 +194,7 @@
           width: 500%;
           height: 100%;
           overflow: hidden;
-          background: #FFFFFF;
+          background: $colorWhite;
           mix-blend-mode: normal;
           opacity: 0.96;
           z-index: 2;
@@ -236,11 +242,11 @@
     &__item {
       position: relative;
       margin-bottom: 32px;
-      color: #1B1C21;
+      color: $textColor;
 
       &:hover,
       &:active {
-        color: #7E7E82;
+        color: $hoverTextColor;
 
         &::before {
           content: '';
@@ -249,7 +255,7 @@
           left: -32px;
           width: 32px;
           height: 8px;
-          background: #41F6D7;
+          background: $colorBlue;
           border-radius: 4px;
           transform: rotate(90deg);
         }
@@ -302,7 +308,7 @@
 
       &:hover,
       &:active {
-        color: #7E7E82;
+        color: $hoverTextColor;
       }
     }
   }

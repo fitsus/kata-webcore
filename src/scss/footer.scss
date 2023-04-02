@@ -1,3 +1,6 @@
+$bgColor: #D9FFF5;
+$textColor: #7E7E82;
+
 .footer {
   position: relative;
   margin-top: 40px;
@@ -8,7 +11,7 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  color: #7E7E82;
+  color: $textColor;
   mix-blend-mode: normal;
   opacity: 0.72;
 
@@ -33,7 +36,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #D9FFF5;
+    background: $bgColor;
   }
 
   &__content {

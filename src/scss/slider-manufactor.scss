@@ -1,3 +1,15 @@
+$colorWhite: #fff;
+$mainBgColor: #EAEAEA;
+$textColor: #1B1C21;
+$hoverTextColor: #7E7E82;
+$colorBlue: #41F6D7;
+$colorBlueLight: #B8FFEC;
+$colorGrey :#B5B6BC;
+$colorPink: #FF3E79;
+$colorF8: #F8F8F8;
+$colorD: #DDDDDD;
+
+
 .swiper {
   width: 100%;
   height: 124px;
@@ -22,15 +34,15 @@
     height: 81px;
     top: 16px;
     right: 0;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(270deg, $colorF8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     z-index: 2;
   }
 
   &-pagination-bullet {
-    background-color: #DDDDDD;
+    background-color: $colorD;
 
     &-active {
-      background-color: #B5B6BC;
+      background-color: $colorGrey;
     }
   }
 }
@@ -67,8 +79,8 @@
     min-width: 240px;
     height: 72px;
     padding: 16px;
-    background-color: #FFFFFF;
-    border: 1px solid #EAEAEA;
+    background-color: $colorWhite;
+    border: 1px solid $mainBgColor;
     border-radius: 6px;
     margin: 0;
 
@@ -84,7 +96,7 @@
       width: 40px;
       height: 40px;
       background: url(../img/icons/dropdown.svg) 50% 50% no-repeat;
-      border: 2px solid #FF3E79;
+      border: 2px solid $colorPink;
       border-radius: 50%;
     }
   }
@@ -100,7 +112,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    color: #1B1C21;
+    color: $textColor;
     margin-left: 24px;
     padding: 16px 32px;
     background-color: transparent;

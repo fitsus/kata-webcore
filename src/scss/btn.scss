@@ -1,7 +1,9 @@
+$btnPink: #FF3E79;
+
 .btn {
   width: 40px;
   height: 40px;
-  background-color: #FF3E79;
+  background-color: $btnPink;
   padding: 10px;
   border-radius: 50%;
 }

@@ -1,3 +1,13 @@
+$colorWhite: #fff;
+$mainBgColor: #EAEAEA;
+$textColor: #1B1C21;
+$hoverTextColor: #7E7E82;
+$colorBlue: #41F6D7;
+$colorBlueLight: #B8FFEC;
+$colorGrey :#B5B6BC;
+$colorPink: #FF3E79;
+$colorF8: #F8F8F8;
+
 .services {
   position: relative;
   padding: 0 16px;
@@ -36,7 +46,7 @@
       left: -20px;
       width: 40px;
       height: 8px;
-      background: #41F6D7;
+      background: $colorBlue;
       border-radius: 4px;
       transform: rotate(90deg);
       z-index: -2;
@@ -69,8 +79,8 @@
 
       &:hover,
       &:active {
-        background-color: #fff;
-        border: 2px solid #B8FFEC;
+        background-color: $colorWhite;
+        border: 2px solid $colorBlueLight;
         border-radius: 6px;
         margin: 0;
       }
@@ -88,7 +98,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      color: #7E7E82;
+      color: $hoverTextColor;
       background-color: transparent;
     }
   }
@@ -148,7 +158,7 @@
     &__btn {
       position: relative;
       text-align: left;
-      background-color: #F8F8F8;
+      background-color: $colorF8;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
@@ -175,7 +185,7 @@
     position: absolute;
     width: 24px;
     height: 40px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    background: linear-gradient(270deg, $colorF8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
     right: 0;
     top: 64px;
   }
