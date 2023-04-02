@@ -871,7 +871,7 @@ h6 {
           margin-bottom: 20px; } }
     .services-slide__image {
       width: 100%;
-      height: auto;
+      max-height: 100%;
       margin-left: -16px;
       order: 1; }
       @media (min-width: 767px) {
