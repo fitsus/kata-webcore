@@ -1616,7 +1616,8 @@ body {
   margin: 0;
   font-family: 'TT Lakes', sans-serif;
   background-color: #F8F8F8;
-  color: #1B1C21; }
+  color: #1B1C21;
+  overflow-x: hidden; }
 
 @media (min-width: 1119px) {
   .main {
