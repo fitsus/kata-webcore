@@ -73,10 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.pageYOffset >= 288) {
         window.scrollTo(0, 288)
       }
+    } else if (modalOppened && window.innerWidth <= 1119) {
+      if (window.pageYOffset >= 180) {
+        window.scrollTo(0, 180)
+      }
     } else if (window.innerWidth <= 1119) {
       if (window.pageYOffset >= 545) {
         window.scrollTo(0, 545)
       }
+    } else if (modalOppened) {
+      document.body.style.overflow = 'hidden'
     }
   }
 
@@ -121,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(openBtn, modalContainer, modalInput) {
     openBtn.addEventListener('click', () => {
       modalContainer.classList.add('modal--active')
-      document.body.style.overflow = 'hidden'
+      document.addEventListener('scroll', scrollLock)
       modalInput.focus({ preventScroll: true })
       modalOppened = true
     })
@@ -137,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ) {
           modalContainer.classList.remove('modal--active')
           document.body.removeAttribute('style')
+          document.removeEventListener('scroll', scrollLock)
           modalOppened = false
         }
       } else {
