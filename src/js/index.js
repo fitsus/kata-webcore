@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackModal = document.getElementById('feedback'),
     feedbackCloseModal = document.getElementById('feedbackClose'),
     btnShowMoreTypes = document.querySelector('[data-slider]'),
-    sliderContainerTypes = document.querySelector('.swiper-types')
+    sliderContainerTypes = document.querySelector('.swiper-types'),
+    modalInputFeedback = feedbackModal.querySelector('.modal__input'),
+    modalInputCall = callModal.querySelector('.modal__input')
 
   function sliderInit() {
     if (window.innerWidth <= 767) {
@@ -66,6 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function scrollLock() {
+    if (window.innerWidth <= 767) {
+      if (window.pageYOffset >= 288) {
+        window.scrollTo(0, 288)
+      }
+    } else if (window.innerWidth <= 1119) {
+      if (window.pageYOffset >= 545) {
+        window.scrollTo(0, 545)
+      }
+    }
+  }
+
   function menuOpen(
     burgerBtn,
     closeBtn,
@@ -83,13 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
         header.classList.add(activeClass)
         nav.classList.add(activeClass)
         burgerBtn.classList.add(hiddenClass)
-        document.body.style.overflow = 'hidden'
-        document.body.classList.add(activeClass)
+        document.addEventListener('scroll', scrollLock)
         menuOppened = true
       })
     })
     window.addEventListener('click', (e) => {
-      console.log(e)
       if (menuOppened) {
         if (e.srcElement.parentElement === closeBtn || e.target === closeBtn) {
           menuList.forEach((el) => {
@@ -98,8 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             burgerBtn.classList.remove(hiddenClass)
             header.classList.remove(activeClass)
             nav.classList.remove(activeClass)
-            document.body.removeAttribute('style')
-            document.body.classList.remove(activeClass)
+            document.removeEventListener('scroll', scrollLock)
             menuOppened = false
           })
         }
@@ -107,10 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function openModal(openBtn, modalContainer) {
+  function openModal(openBtn, modalContainer, modalInput) {
     openBtn.addEventListener('click', () => {
       modalContainer.classList.add('modal--active')
       document.body.style.overflow = 'hidden'
+      modalInput.focus({ preventScroll: true })
       modalOppened = true
     })
   }
@@ -149,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     headerNavContainer,
     menuDynamicElementsList
   )
-  openModal(callBtn, callModal)
+  openModal(callBtn, callModal, modalInputCall)
   closeModal(callCloseModal, callModal, modalOppened)
-  openModal(feedbackBtn, feedbackModal)
+  openModal(feedbackBtn, feedbackModal, modalInputFeedback)
   closeModal(feedbackCloseModal, feedbackModal, modalOppened)
 })
